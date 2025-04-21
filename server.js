@@ -25,9 +25,6 @@ mongoose.connect(process.env.MONGODB_URI, {
   console.error('❌ MongoDB connection error:', err);
 });
 
-const path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
-
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/services', servicesRoutes);
